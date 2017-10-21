@@ -18,6 +18,9 @@ export default class Home extends Component {
         <Link to="/page">
           <FormattedMessage id="home.use-a-link" />
         </Link>
+        <p>
+          <FormattedMessage id="home.intro-text" />
+        </p>
       </div>
     );
   }
