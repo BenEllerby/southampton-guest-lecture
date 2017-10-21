@@ -25,7 +25,7 @@ export default class Root extends Component {
 
   render() {
     return (
-      <IntlProvider locale="fr" messages={locales.fr} >
+      <IntlProvider locale="en" messages={locales.en} >
         <div className="App">
           <div className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
