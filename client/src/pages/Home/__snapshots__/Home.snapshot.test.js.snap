@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Home component should renders correctly 1`] = `
+<div>
+  <p
+    className="intro"
+  >
+    <span>
+      Pour commencer, modifie
+    </span>
+    <code
+      className="intro-code"
+    >
+      src/App.js
+    </code>
+    <span>
+      et sauvegarde pour recharger.
+    </span>
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    <span>
+      Click sur moi
+    </span>
+  </button>
+  <a
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <span>
+      Ou utilise un lien
+    </span>
+  </a>
+  <p>
+    <span>
+      This application let's you check the weather.
+    </span>
+  </p>
+</div>
+`;
