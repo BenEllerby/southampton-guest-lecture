@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/carkey
+    docker:
+    - image: circleci/python:3.4.6
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - client-yarn-deps-{{ checksum "client/yarn.lock" }}
+      - run:
+          name: client yarn setup
+          command: |
+            sudo apt-get install apt-transport-https
+            curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            sudo apt-get update && sudo apt-get install yarn
+            cd client && yarn
+      - save_cache:
+          key: client-yarn-deps-{{ checksum "client/yarn.lock" }}
+          paths:
+            - "client/node_modules"
+      - run:
+          name: Test app
+          command: |
+            cd client/
+            yarn test
