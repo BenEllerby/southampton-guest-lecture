@@ -32,10 +32,5 @@ exports[`The Home component should renders correctly 1`] = `
       Ou utilise un lien
     </span>
   </a>
-  <p>
-    <span>
-      This application let's you check the football.
-    </span>
-  </p>
 </div>
 `;
