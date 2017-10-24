@@ -32,5 +32,10 @@ exports[`The Home component should renders correctly 1`] = `
       Ou utilise un lien
     </span>
   </a>
+  <p>
+    <span>
+      My amazing app
+    </span>
+  </p>
 </div>
 `;
